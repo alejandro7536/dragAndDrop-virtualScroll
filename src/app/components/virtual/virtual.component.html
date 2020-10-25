@@ -1,0 +1,42 @@
+<div class="mx-12">
+  <button
+    class=" inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 transition duration-150 ease-in-out mr-2"
+    (click)=irFinal()>
+    <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
+    </svg>
+    Ir al final</button>
+
+  <button
+  class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 transition duration-150 ease-in-out mr-2"
+
+    (click)=irMedio()>
+    <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+    </svg>
+    Ir a la mitad</button>
+
+  <button
+  class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 transition duration-150 ease-in-out mr-2"
+
+    (click)=irInicio()>
+    <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+    </svg>
+    Ir al inicio</button>
+
+
+  <cdk-virtual-scroll-viewport itemSize="50" class="mt-5 animate__animated animate__fadeIn w-full sm:w-full bg-white divide-y divide-gray-200 rounded-lg shadow-lg bg-gray-50"
+    style="height: 50vh;">
+
+    <div class="px-6 py-4 text-gray-700 border-b"
+      *cdkVirtualFor="let item of personas; let i = index; let conteo = count">
+      <p class="text-bold text-gray-600 animate__animated animate__fadeIn">Item {{i}} / {{conteo}} </p>
+    </div>
+  </cdk-virtual-scroll-viewport>
+
+
+</div>

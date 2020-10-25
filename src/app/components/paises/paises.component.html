@@ -1,0 +1,9 @@
+<div class="mx-12">
+  <ul class="" cdkDropList
+  (cdkDropListDropped)="drop($event)">
+
+    <li *ngFor="let pais of paises" class="px-6 py-4 text-gray-700 shadow my-2 rounded-lg cursor-move" cdkDrag>
+      {{pais.name}}
+    </li>
+  </ul>
+</div>
